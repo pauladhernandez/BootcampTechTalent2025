@@ -1,10 +1,9 @@
-package COM.copy;
 
-public class HolaMundo {
+public class Tarea4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hola jueves") ;
+		System.out.println("Tarea 4");
 	}
 
 }

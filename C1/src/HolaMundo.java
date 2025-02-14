@@ -1,4 +1,3 @@
-package COM;
 
 public class HolaMundo {
 
