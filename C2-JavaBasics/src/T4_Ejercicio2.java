@@ -12,6 +12,7 @@ public class T4_Ejercicio2 {
 		double resta = a - n;
 		int valorNumerico = (int) letra;
 		
+//		Resultados
 		System.out.println("Variable N = 20");
 		System.out.println("Variable A = 10.5");
 		System.out.println("Variable C = p");
