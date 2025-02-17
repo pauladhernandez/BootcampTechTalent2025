@@ -19,7 +19,8 @@ public class T4_Ejercicio2 {
 		System.out.println("20 + 10.5 = " + suma);
 		System.out.println("10.5 - 20 = " + resta);
 		System.out.println("Valor numérico del carácter p: " + valorNumerico );
-			
+		
+		
 	}
 
 }
