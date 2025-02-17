@@ -1,0 +1,22 @@
+
+public class OpComparacionRelacionApp {
+
+	public static void main(String[] args) {
+		int op1=10; int op2=20; int op3=30;
+		boolean result=false;
+		
+		result=(op1 == op2);
+		System.out.println(result);
+		result = (op1 != op2);
+		System.out.println(result);
+		
+//		Operadores lógicos "condicionales" AND && y OR ||
+//		result = (op1 >3 op2);
+		
+//		Ejemplo de importancia de los paréntesis
+		System.out.println("El resultado de la suma es: " + (op1 + op2));
+		
+		
+	}
+
+}
