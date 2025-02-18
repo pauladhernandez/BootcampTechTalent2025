@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Explica_UD5 {
+public class UD5_ScannerApp {
 
 	public static void main(String[] args) {
 		

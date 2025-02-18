@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class UD5PaeseIntInputApp {
+public class UD5_ParseIntInputApp {
 
 	public static void main(String[] args) {
 		
