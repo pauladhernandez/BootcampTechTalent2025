@@ -1,5 +1,6 @@
+package UD04JavaBasics.teoria;
 
-public class OpComparacionRelacionApp {
+public class UD4OpComparacionRelacionApp {
 
 	public static void main(String[] args) {
 		int op1=10; int op2=20; int op3=30;

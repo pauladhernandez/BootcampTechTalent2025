@@ -1,3 +1,4 @@
+package UD_05_Teoria;
 import java.util.Scanner;
 
 public class UD5_ScannerApp {
