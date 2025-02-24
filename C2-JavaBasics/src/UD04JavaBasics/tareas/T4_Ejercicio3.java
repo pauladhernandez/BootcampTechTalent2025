@@ -42,7 +42,8 @@ public class T4_Ejercicio3 {
 		System.out.println("Suma de todas las variables: " + (x+y+n+m));
 		
 //		Multiplicacion de todas las variables
-		System.out.println("Multiplicacion de todas las variables: " + (x*y*n*m));
+		System.out.println("Multiplicacion "
+							+ "de todas las variables: " + (x*y*n*m));
 		
 		
 		
