@@ -24,11 +24,23 @@ public class T5_Ejercicio11 {
 		case "martes":	
 			System.out.println("Es un día laboral.");
             break;
-		case "sabado":
+		case "miércoles":
+			System.out.println("Esw un día laboral.");
+			break;
+		case "jueves":
+			System.out.println("Es un día laboral.");
+			break;
+		case "viernes":
+			System.out.println("Es un día laboral.");
+			break;
+       	case "sabado":
             System.out.println("No es un día laboral.");
             break;
+       	case "domingo":
+			System.out.println("No es un día laboral.");
+			break;
 		default:
-            System.out.println("Día no válido	.");
+            System.out.println("Día no válido.");
             break;
 		}
 		

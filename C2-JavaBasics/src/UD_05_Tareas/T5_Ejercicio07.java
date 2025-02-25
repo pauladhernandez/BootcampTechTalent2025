@@ -1,6 +1,6 @@
 package UD_05_Tareas;
 
-public class T5_Ejercicio7 {
+public class T5_Ejercicio07 {
 
 	public static void main(String[] args) {
 		

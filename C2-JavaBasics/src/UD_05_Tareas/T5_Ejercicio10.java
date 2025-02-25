@@ -2,7 +2,7 @@ package UD_05_Tareas;
 
 import java.util.Scanner;
 
-public class T5_Ejercicio_10 {
+public class T5_Ejercicio10 {
 
 	public static void main(String[] args) {
 		

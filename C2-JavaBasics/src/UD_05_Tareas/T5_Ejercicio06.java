@@ -1,7 +1,7 @@
 package UD_05_Tareas;
 import javax.swing.JOptionPane;
 
-public class T5_Ejercicio6 {
+public class T5_Ejercicio06 {
 
 	public static void main(String[] args) {
 		
