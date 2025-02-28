@@ -5,7 +5,7 @@ public class T5_Ejercicio06 {
 
 	public static void main(String[] args) {
 		
-		final double IVA=0.21;
+		final double IVA=0.21; // Se pone final double porque es una constante y no se puede modificar
 		String text_num=JOptionPane.showInputDialog("Introduce el precio del producto");
 		
 		int precio=Integer.parseInt(text_num);
