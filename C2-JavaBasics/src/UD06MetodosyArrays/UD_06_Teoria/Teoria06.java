@@ -1,4 +1,4 @@
-package UD_06_Teoria;
+package UD06MetodosyArrays.UD_06_Teoria;
 
 import javax.swing.JOptionPane;
 
@@ -18,6 +18,7 @@ public class Teoria06 {
 		public static int sumaNumeros(int parametro1, int parametro2) {
 			
 			return 	parametro1 + parametro2;
+			
 		}
 		
 		
