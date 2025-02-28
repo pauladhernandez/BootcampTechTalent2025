@@ -1,5 +1,5 @@
 
-package UD_05_Tareas;
+package UD05FlujosDatos.UD_05_Tareas;
 
 import java.util.Scanner;
 

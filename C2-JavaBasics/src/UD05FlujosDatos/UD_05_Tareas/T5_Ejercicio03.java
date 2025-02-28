@@ -1,4 +1,4 @@
-package UD_05_Tareas;
+package UD05FlujosDatos.UD_05_Tareas;
 import javax.swing.JOptionPane;
 
 public class T5_Ejercicio03 {

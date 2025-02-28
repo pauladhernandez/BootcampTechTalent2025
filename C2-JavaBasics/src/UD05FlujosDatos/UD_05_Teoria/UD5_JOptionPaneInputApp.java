@@ -1,4 +1,4 @@
-package UD_05_Teoria;
+package UD05FlujosDatos.UD_05_Teoria;
 import javax.swing.JOptionPane;
 
 public class UD5_JOptionPaneInputApp {
