@@ -2,7 +2,7 @@ package UD06MetodosyArrays.UD_06_Tareas;
 
 import javax.swing.JOptionPane;
 
-public class T6_Ejercicio1 {
+public class T6_Ejercicio01 {
 
 	public static void main(String[] args) {
 		// Variables
