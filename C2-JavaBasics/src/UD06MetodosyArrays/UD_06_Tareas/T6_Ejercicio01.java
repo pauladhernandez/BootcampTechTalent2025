@@ -5,12 +5,14 @@ import javax.swing.JOptionPane;
 public class T6_Ejercicio01 {
 
 	public static void main(String[] args) {
+		
 		// Variables
 		int radio = 0;
 		int base = 0;
 		int altura = 0;
 		String figura = "";
 		String mensaje = "";
+		
 		// Inputs de usuario
 		figura = JOptionPane
 				.showInputDialog("Introduce la figura a calcular " + "el área (círculo, triángulo, cuadrado):")

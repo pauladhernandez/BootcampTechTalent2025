@@ -2,7 +2,7 @@ package UD06MetodosyArrays.UD_06_Teoria;
 
 import javax.swing.JOptionPane;
 
-public class Teoria06 {
+public class MetodosApp {
 
 	public static void main(String[] args) {
 		
