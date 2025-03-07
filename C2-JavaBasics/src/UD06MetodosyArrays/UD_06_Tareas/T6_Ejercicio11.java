@@ -1,60 +1,78 @@
 package UD06MetodosyArrays.UD_06_Tareas;
 
-import java.util.Arrays;
-
-import javax.swing.JOptionPane;
+import java.util.Random;
+import java.util.Scanner;
 
 public class T6_Ejercicio11 {
 
 	public static void main(String[] args) {
-//		
-//		Crea dos arrays de números con la dimensión pasada por teclado.
-//		Uno de ellos estará rellenado con números aleatorios y el otro apuntara al array anterior,
-//		reasigna los valores del segundo array con valores aleatorios.
-//		Después, crea un método que tenga como parámetros, los dos arrays y devuelva uno nuevo
-//		con la multiplicación de la posición 0 del array1 con el del array2 y así sucesivamente.
-//		Por último, muestra el contenido de cada array.
 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce la dimensión de los arrays: ");
+		int dimension = sc.nextInt();
 
-		        // Crear los arrays
-		        int[] array1 = new int[dimension];
-		        int[] array2 = array1; // Apuntando inicialmente a array1
-		        int[] multiplicado[]= new  
-		        
-		        // Rellenar array1 con valores aleatorios
-		        llenarArrayAleatorio(array1);
+		int[] array1 = rellenarArray1(dimension); // array1 se rellena de randoms con el método
+//		array1 = rellenarArray1(dimension);
 
-		        // Reasignar valores aleatorios a array2
-		        array2 = new int[dimension]; // Creamos un nuevo array para array2
-		        llenarArrayAleatorio(array2);
+		int[] array2 = rellenarNumeros(dimension);
+//		array2 = rellenarNumeros(dimension);
 
-		        // Crear el array de resultado con la multiplicación de ambos arrays
-		        int[] resultado = multiplicarArrays(array1, array2);
+		int[] multiplicado = multiplicarArrays(array1, array2);
+//		multiplicado = multiplicarArrays(array1, array2);
 
-		        // Mostrar los arrays
-		        System.out.println("Array 1: " + Arrays.toString(array1));
-		        System.out.println("Array 2: " + Arrays.toString(array2));
-		        System.out.println("Resultado de la multiplicación: " + Arrays.toString(resultado));
-		    }
-
-		    // Método para llenar un array con números aleatorios entre 1 y 100
-		    public static void llenarArrayAleatorio(int[] array) {
-		        for (int i = 0; i < array.length; i++) {
-		            array[i] = (int) (Math.random() * 100) + 1; // Números aleatorios entre 1 y 100
-		        }
-		    }
-
-		    // Método que multiplica los elementos de dos arrays y devuelve un nuevo array con los resultados
-		    public static int[] multiplicarArrays(int[] array1, int[] array2) {
-		        int[] resultado = new int[array1.length];
-		        for (int i = 0; i < array1.length; i++) {
-		            resultado[i] = array1[i] * array2[i]; // Multiplicamos los valores
-		        }
-		        return resultado;
-		    }
 		
+//		Imprimir los arrays
+		System.out.println("Array1 ");
+		for (int num : array1) {
+			System.out.println(num);
+		}
+		System.out.println("Array2 ");
+		for (int num : array2) {
+			System.out.println(num);
+		}
+		System.out.println("Array Multiplicado ");
+		for (int num : multiplicado) {
+			System.out.println(num);
+		}
 
+		sc.close();
 		
 	}
 
+	public static int[] rellenarArray1(int tamany) {
+
+		Random aleatorio = new Random();
+		int[] arrayPrimero = new int[tamany];
+
+		for (int i = 0; i < tamany; i++) {
+
+			arrayPrimero[i] = aleatorio.nextInt(11);
+		}
+		// arrayPrimero = {8,5,3}
+
+		return arrayPrimero;
+	}
+
+	 public static int[] rellenarNumeros(int tamany) {
+	        Random aleatorio = new Random();
+	        int[] array = new int[tamany];
+
+	        for (int i = 0; i < tamany; i++) {
+	            array[i] = aleatorio.nextInt(11); // Genera números entre 0 y 10
+	        }
+
+	        return array;
+	}
+
+	public static int[] multiplicarArrays(int[] array1, int[] array2) {
+
+		int[] resultado = new int[array1.length];
+		for (int i = 0; i < array1.length; i++) {
+			resultado[i] = array1[i] * array2[i];
+		}
+		return resultado;
+	}
 }
+
+
+
