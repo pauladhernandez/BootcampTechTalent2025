@@ -16,13 +16,11 @@ public class T6_Ejercicio11 {
 //		Por último, muestra el contenido de cada array.
 
 
-		        // Pedir la dimensión del array
-		        int dimension = Integer.parseInt(JOptionPane.showInputDialog("Introduce la dimensión del array:"));
-
-		        // Crear los dos arrays
+		        // Crear los arrays
 		        int[] array1 = new int[dimension];
 		        int[] array2 = array1; // Apuntando inicialmente a array1
-
+		        int[] multiplicado[]= new  
+		        
 		        // Rellenar array1 con valores aleatorios
 		        llenarArrayAleatorio(array1);
 

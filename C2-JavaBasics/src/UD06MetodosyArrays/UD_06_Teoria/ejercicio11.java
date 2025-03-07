@@ -9,50 +9,59 @@ public class ejercicio11 {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce la dimensión de los arrays: ");
-		Random scanner;
 		int dimension = sc.nextInt();
 
-		
-		int[] array1 = rellenarArray1[dimension]; // array1 se rellena de randoms con el método
-
+		int[] array1 = rellenarArray1(dimension); // array1 se rellena de randoms con el método
 //		array1 = rellenarArray1(dimension);
 
-		int[] array2 = new int[dimension];
-		
-		
-		
-		int multiplicado[] = new int[dimension];
+		int[] array2 = rellenarNumeros(dimension);
+//		array2 = rellenarNumeros(dimension);
 
+		int[] multiplicado = multiplicarArrays(array1, array2);
+//		multiplicado = multiplicarArrays(array1, array2);
+
+		
 //		Imprimir los arrays
-		System.out.println();
+		System.out.println("Array1 ");
+		for (int num : array1) {
+			System.out.println(num);
+		}
+		System.out.println("Array2 ");
+		for (int num : array2) {
+			System.out.println(num);
+		}
+		System.out.println("Array Multiplicado ");
+		for (int num : multiplicado) {
+			System.out.println(num);
+		}
+
+		sc.close();
+		
 	}
 
-	}
-
-	public static int[] x(int tamany) {
+	public static int[] rellenarArray1(int tamany) {
 
 		Random aleatorio = new Random();
-		int[] arrayPrimero;
+		int[] arrayPrimero = new int[tamany];
 
 		for (int i = 0; i < tamany; i++) {
 
-			arrayPrimero[i] = aleatorio.nextInt(0, 11);
+			arrayPrimero[i] = aleatorio.nextInt(11);
 		}
 		// arrayPrimero = {8,5,3}
 
 		return arrayPrimero;
 	}
 
-	public static int[] rellenarNumeros(int[] array1, int[] array2) {
+	 public static int[] rellenarNumeros(int tamany) {
+	        Random aleatorio = new Random();
+	        int[] array = new int[tamany];
 
-		Random aleatorio = new Random();
-		int[] arraySegundo;
-		for (int i = 0; i < array1.length; i++) {
-			array2[i] = aleatorio.nextInt(0, 11);
+	        for (int i = 0; i < tamany; i++) {
+	            array[i] = aleatorio.nextInt(11); // Genera números entre 0 y 10
+	        }
 
-		}
-
-		return arraySegundo;
+	        return array;
 	}
 
 	public static int[] multiplicarArrays(int[] array1, int[] array2) {
@@ -63,5 +72,4 @@ public class ejercicio11 {
 		}
 		return resultado;
 	}
-
-}}
+}
