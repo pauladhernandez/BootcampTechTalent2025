@@ -4,19 +4,11 @@ import javax.swing.JOptionPane;
 
 public class T6_Ejercicio02 {
 
-	private static final JOptionPane JOPtionPane = null;
-
 	public static void main(String[] args) {
 
-//		Crea una aplicación que nos genere una cantidad de números enteros aleatorios que
-//		nosotros le pasaremos por teclado. Crea un método donde pasamos como parámetros entre
-//		que números queremos que los genere, podemos pedirlas por teclado antes de generar los
-//		números. Este método devolverá un número entero aleatorio. Muestra estos números por
-//		pantalla.
-//		
 
 		int cantRandoms = Integer
-				.parseInt(JOptionPane.showInputDialog("Introduce " + "la cantidad de números aleatorios a generar "));
+				.parseInt(JOptionPane.showInputDialog("Introduce la cantidad de números aleatorios a generar "));
 
 		int r1, r2;
 
