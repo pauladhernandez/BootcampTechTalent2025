@@ -5,11 +5,11 @@ public class T6_Ejercicio05 {
 
     public static void main(String[] args) {
         int numeroDecimal = 0; 
-        String binaryNumber = deciamalABinario(numeroDecimal);
-        System.out.println("El binario de " + numeroDecimal + " es: " + binaryNumber);
+        String numeroBinario = decimalABinario(numeroDecimal);
+        System.out.println("El binario de " + numeroDecimal + " es: " + numeroBinario);
     }
 
-    public static String deciamalABinario(int numero) {
+    public static String decimalABinario(int numero) {
         if (numero == 0) {
             return "0";
         }
