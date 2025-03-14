@@ -1,25 +1,33 @@
 
 package UD06MetodosyArrays.UD_06_Tareas;
 
+import java.util.Scanner;
+
 public class T6_Ejercicio05 {
 
     public static void main(String[] args) {
-        int numeroDecimal = 0; 
-        String numeroBinario = decimalABinario(numeroDecimal);
-        System.out.println("El binario de " + numeroDecimal + " es: " + numeroBinario);
+    	
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Introducir un número: ");
+    	String num = sc.nextLine();
+    	
+    	int numero = Integer.parseInt(num);
+    	System.out.println(Binario(numero));
+    	
+    	sc.close();
+    	
+   
+    }
+    public static String Binario (int n1) {
+    	String result = "";
+    	int resto;
+    	do { 
+    		resto = n1%2;
+    		n1 = n1/2;
+    		result = resto + result;
+    	}while (n1>0);
+    	
+    	return result;
+    	}
     }
 
-    public static String decimalABinario(int numero) {
-        if (numero == 0) {
-            return "0";
-        }
-
-        StringBuilder binario = new StringBuilder();
-		while (numero > 0) {
-            int resto = numero % 2;
-            binario.insert(0, resto);
-            numero = numero / 2;
-        }
-        return binario.toString();
-    }
-}
