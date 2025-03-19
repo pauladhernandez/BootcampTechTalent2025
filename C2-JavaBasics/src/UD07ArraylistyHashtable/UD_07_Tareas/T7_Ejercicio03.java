@@ -1,6 +1,7 @@
 package UD07ArraylistyHashtable.UD_07_Tareas;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class T7_Ejercicio03 {
@@ -70,7 +71,7 @@ public class T7_Ejercicio03 {
 		        scanner.nextLine();  // Limpiar el buffer
 		        
 		        // Añadir el artículo al diccionario
-		        stockProductos.put(articulo, precio);
+		        stockProductos.put(articulo, (int) precio);
 		        System.out.println("Artículo '" + articulo + "' añadido con éxito.");
 		    }
 
@@ -94,7 +95,7 @@ public class T7_Ejercicio03 {
 		            System.out.println("No hay artículos en el stock.");
 		        } else {
 		            System.out.println("\nListado de artículos en el stock:");
-		            for (Map.Entry<String, Double> entry : stockProductos.entrySet()) {
+		            for (Entry<String, Integer> entry : stockProductos.entrySet()) {
 		                System.out.println("Artículo: " + entry.getKey() + " - Precio: " + entry.getValue() + " €");
 		            }
 		        }
