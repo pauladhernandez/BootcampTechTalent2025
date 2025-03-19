@@ -22,6 +22,10 @@ public class T7_Ejercicio01 {
         scanner.nextLine(); // Limpiar el buffer
         return numAlumnos;
     }
+    private static String solicitarNombre(Scanner scanner) {
+        System.out.print("Nombre del alumno: ");
+        return scanner.nextLine();
+    }
 
     private static void ingresarNotasAlumnos(Scanner scanner, HashMap<String, Double> notasMedia, int numAlumnos) {
         for (int i = 0; i < numAlumnos; i++) {
@@ -30,11 +34,7 @@ public class T7_Ejercicio01 {
             double notaMedia = calcularNotaMedia(scanner);
             notasMedia.put(nombre, notaMedia);
         }
-    }
-
-    private static String solicitarNombre(Scanner scanner) {
-        System.out.print("Nombre del alumno: ");
-        return scanner.nextLine();
+    
     }
 
     private static double calcularNotaMedia(Scanner scanner) {
