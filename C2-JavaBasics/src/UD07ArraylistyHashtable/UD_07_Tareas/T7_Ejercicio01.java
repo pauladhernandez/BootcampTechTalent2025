@@ -34,7 +34,7 @@ public class T7_Ejercicio01 {
             double notaMedia = calcularNotaMedia(scanner);
             notasMedia.put(nombre, notaMedia);
         }
-    
+        
     }
 
     private static double calcularNotaMedia(Scanner scanner) {
