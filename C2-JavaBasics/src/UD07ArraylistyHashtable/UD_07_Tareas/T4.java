@@ -49,8 +49,8 @@ package UD07ArraylistyHashtable.UD_07_Tareas;
 				stock.put("Escritorio", 15);
 				inventario.put("Pan", 1.00);
 				stock.put("Pan", 15);
-				inventario.put("Pan", 1.00);
-				stock.put("Pan", 15);
+				inventario.put("USB", 1.00);
+				stock.put("USB", 15);
 			}
 
 			private static void comprarProducto() {
