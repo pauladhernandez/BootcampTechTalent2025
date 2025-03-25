@@ -67,6 +67,10 @@ public class T7_Ejercicio03 {
 	        preciosProductos.put(nombre, precio);
 	        stockProductos.put(nombre, cantidad);
 	        System.out.println("Producto agregado exitosamente.");
+	        
+	        listarProductos();
+	        
+	        scanner.close();
 	    }
 	    	
 
@@ -79,8 +83,11 @@ public class T7_Ejercicio03 {
 	            System.out.println("Producto: " + nombre);
 	            System.out.println("Precio: €" + preciosProductos.get(nombre));
 	            System.out.println("Cantidad en stock: " + stockProductos.get(nombre));
+	       
+	            
 	        } else {
 	            System.out.println("El producto no existe en el inventario.");
+	            scanner.close();
 	        }
 	    }
 
@@ -88,6 +95,7 @@ public class T7_Ejercicio03 {
 	        System.out.println("\nInventario:");
 	        for (String producto : listaProductos) {
 	            System.out.println(producto + " - €" + preciosProductos.get(producto) + "\nCantidad en stock: " + stockProductos.get(producto));
+	            System.out.println("-----------------------");
 	        }
 	        
 	    }
