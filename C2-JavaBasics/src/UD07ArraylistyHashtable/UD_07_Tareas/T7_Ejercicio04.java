@@ -142,5 +142,6 @@ public class T7_Ejercicio04 {
 		} else {
 			System.out.println("Opción inválida.");
 		}
+		
 	}
 }
