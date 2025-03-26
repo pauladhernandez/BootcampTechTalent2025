@@ -1,4 +1,4 @@
-package UD08POO.UD08POO_Teoria;
+package UD08POO;
 
 public class Empleado {
 
