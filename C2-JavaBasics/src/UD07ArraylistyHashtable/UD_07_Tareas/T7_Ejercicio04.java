@@ -6,17 +6,18 @@ public class T7_Ejercicio04 {
 
 	private static Map<String, Double> inventario = new HashMap<>();
 	private static Map<String, Integer> stock = new HashMap<>();
-	private static List<String> carrito = new ArrayList<>();
 	private static Scanner scanner = new Scanner(System.in);
+	private static double totalAPagar = 0.0;
 
 	public static void main(String[] args) {
 		inicializarInventario();
+		mostrarTienda();
 		boolean ejecutando = true;
 
 		while (ejecutando) {
-			System.out.println("\n1. Agregar producto al carrito");
-			System.out.println("2. Ver carrito y finalizar compra");
-			System.out.println("3. Administrar stock");
+			System.out.println("\n1. Comprar producto");
+			System.out.println("2. Administrar stock");
+			System.out.println("3. Pagar");
 			System.out.println("4. Salir");
 			System.out.print("Seleccione una opción: ");
 			int opcion = scanner.nextInt();
@@ -24,13 +25,13 @@ public class T7_Ejercicio04 {
 
 			switch (opcion) {
 			case 1:
-				agregarAlCarrito();
+				comprarProducto();
 				break;
 			case 2:
-				finalizarCompra();
+				administrarStock();
 				break;
 			case 3:
-				administrarStock();
+				pagar();
 				break;
 			case 4:
 				ejecutando = false;
@@ -42,17 +43,17 @@ public class T7_Ejercicio04 {
 	}
 
 	private static void inicializarInventario() {
-		inventario.put("Leche", 1.50);
-		stock.put("Leche", 10);
+		inventario.put("Pulsera", 1.50);
+		stock.put("Pulsera", 10);
+		inventario.put("Escritorio", 1.00);
+		stock.put("Escritorio", 15);
 		inventario.put("Pan", 1.00);
 		stock.put("Pan", 15);
-		inventario.put("Huevos", 2.50);
-		stock.put("Huevos", 8);
-		inventario.put("Arroz", 3.00);
-		stock.put("Arroz", 12);
+		inventario.put("USB", 1.00);
+		stock.put("USB", 15);
 	}
 
-	private static void agregarAlCarrito() {
+	private static void comprarProducto() {
 		System.out.println("Productos disponibles:");
 		for (String producto : inventario.keySet()) {
 			System.out
@@ -62,86 +63,70 @@ public class T7_Ejercicio04 {
 		System.out.print("Ingrese el nombre del producto: ");
 		String producto = scanner.nextLine();
 		if (inventario.containsKey(producto) && stock.get(producto) > 0) {
-			carrito.add(producto);
 			stock.put(producto, stock.get(producto) - 1);
-			System.out.println("Producto agregado al carrito.");
+			double total = inventario.get(producto) * 1.21;
+			totalAPagar += total;
+			System.out.println("Total con IVA: " + total + "€");
 		} else {
 			System.out.println("Producto no disponible o sin stock.");
 		}
 	}
 
-	private static void finalizarCompra() {
-		if (carrito.isEmpty()) {
-			System.out.println("El carrito está vacío.");
-			return;
-		}
-		double total = 0;
-		for (String item : carrito) {
-			total += inventario.get(item);
-		}
-		System.out.println("Seleccione el IVA a aplicar:");
-        System.out.println("1. 21%");
-        System.out.println("2. 4%");
-        System.out.print("Opción: ");
-        int opcionIVA = scanner.nextInt();
-        scanner.nextLine(); 
-        
-        double tasaIVA = (opcionIVA == 2) ? 0.04 : 0.21;
-        double iva = total * tasaIVA;
-        double totalConIVA = total + iva;
-        
-//		double iva = total * 0.21;
-//		double iva2 = total * 0.04;
-//		double totalConIVA = total + iva;
-
-		System.out.println("Total bruto: " + total + "€");
-		System.out.println("IVA aplicado (" + (tasaIVA * 100) + "%): " + iva + "€");
-		System.out.println("Total con IVA: " + totalConIVA + "€");
-		System.out.print("Ingrese cantidad pagada: ");
-		double pago = scanner.nextDouble();
+	private static void administrarStock() {
+		System.out.print("Ingrese el nombre del producto: ");
+		String producto = scanner.nextLine();
+		System.out.print("Ingrese la cantidad a añadir: ");
+		int cantidad = scanner.nextInt();
 		scanner.nextLine();
-		if (pago >= totalConIVA) {
-			System.out.println("Cambio a devolver: " + (pago - totalConIVA) + "€");
-			carrito.clear();
+		stock.put(producto, stock.getOrDefault(producto, 0) + cantidad);
+		System.out.println("Stock actualizado.");
+	}
+
+	private static void pagar() {
+		if (totalAPagar > 0) {
+			System.out.println("Seleccione el porcentaje de IVA:");
+			System.out.println("1. 21%");
+			System.out.println("2. 4%");
+			int opcionIVA = scanner.nextInt();
+			scanner.nextLine();
+			double ivaSeleccionado = 0.21; // Default IVA
+			switch (opcionIVA) {
+			case 1:
+				ivaSeleccionado = 0.21;
+				break;
+			case 2:
+				ivaSeleccionado = 0.04;
+				break;
+			default:
+				System.out.println("Opción inválida. Se aplicará el IVA del 21%.");
+			}
+
+			double totalConIVA = totalAPagar * (1 + ivaSeleccionado);
+			System.out.println("El total a pagar con IVA es: " + totalConIVA + "€");
+			System.out.print("Ingrese la cantidad con la que va a pagar: ");
+			double pago = scanner.nextDouble();
+			scanner.nextLine();
+			if (pago >= totalConIVA) {
+				double cambio = pago - totalConIVA;
+				System.out.println("Pago realizado con éxito. Su cambio es: " + redondear(cambio) + "€");
+				totalAPagar = 0.0;
+			} else {
+				System.out.println("Pago insuficiente. Por favor, intente nuevamente.");
+			}
 		} else {
-			System.out.println("Saldo insuficiente.");
+			System.out.println("No hay productos en el carrito.");
 		}
 	}
 
-	private static void administrarStock() {
-		System.out.println("1. Agregar nuevo producto");
-		System.out.println("2. Añadir stock");
-		System.out.print("Seleccione una opción: ");
-		int opcion = scanner.nextInt();
-		scanner.nextLine();
+	private static double redondear(double valor) {
+		return Math.round(valor * 100) / 100.0;
+	}
 
-		if (opcion == 1) {
-			System.out.print("Ingrese el nombre del nuevo producto: ");
-			String producto = scanner.nextLine();
-			System.out.print("Ingrese el precio: ");
-			double precio = scanner.nextDouble();
-			System.out.print("Ingrese la cantidad inicial: ");
-			int cantidad = scanner.nextInt();
-			scanner.nextLine();
-
-			inventario.put(producto, precio);
-			stock.put(producto, cantidad);
-			System.out.println("Producto agregado correctamente.");
-		} else if (opcion == 2) {
-			System.out.print("Ingrese el nombre del producto a reabastecer: ");
-			String producto = scanner.nextLine();
-			if (stock.containsKey(producto)) {
-				System.out.print("Ingrese la cantidad a añadir: ");
-				int cantidad = scanner.nextInt();
-				scanner.nextLine();
-				stock.put(producto, stock.get(producto) + cantidad);
-				System.out.println("Stock actualizado.");
-			} else {
-				System.out.println("Producto no encontrado.");
-			}
-		} else {
-			System.out.println("Opción inválida.");
+	private static void mostrarTienda() {
+		System.out.println("Productos disponibles:");
+		for (String producto : inventario.keySet()) {
+			System.out
+					.println(producto + " - Precio: " + inventario.get(producto) + "€ - Stock: " + stock.get(producto));
 		}
-		
 	}
 }
