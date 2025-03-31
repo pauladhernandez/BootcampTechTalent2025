@@ -87,4 +87,18 @@ public class Persona {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+	public void mostrar() {
+		System.out.println("Su nombre es " + this.nombre + ", y tiene " + this.edad + " años. Su DNI es " + this.DNI
+				+ ", su sexo es " + this.sexo + ", su peso es " + this.peso + " y su altura es " + this.altura + ".");
+	}
+	
+	public static void main(String[] args) {
+		Persona persona1 = new Persona("Concha", 24, "43764245P", 'M', 60, 1.62);
+		Persona persona2 = new Persona("Alejo", 28, "98237485Z", 'H', 80, 1.80);
+		Persona persona3 = new Persona("Maria", 24, "12345678A", 'M', 60, 1.59);
+		persona1.mostrar();
+		persona2.mostrar();
+		persona3.mostrar();
+	}
+	
 }
