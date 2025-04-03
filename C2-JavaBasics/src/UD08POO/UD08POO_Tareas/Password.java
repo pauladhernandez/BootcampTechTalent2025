@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 
 public class Password {
 
+	//Atributos
 	private static final int LONGITUD_POR_DEFECTO = 8;
 	private static final String CARACTERES = "ABCDEFGHIJKLMNÑOPQRSTUVXWYZabcdefghijklmnoñpqrstuvwxyz0213456789";
 	private int longitud;
