@@ -1,4 +1,4 @@
-package UD09HerenciaEnJAVA.UD09HerenciaEnJAVA_Tareas;
+package UD09HerenciaEnJAVA_Tareas;
 
 class ej06cine {
     String titulo;
