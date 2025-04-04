@@ -2,7 +2,7 @@ package UD08POO.UD08POO_Tareas;
 
 public class Electrodomestico {
 
-	private static final String COLOR_POR_DEFECTO = "Blanco";
+	private static final String COLOR_POR_DEFECTO = "blanco";
 	private static final char CONSUMO_POR_DEFECTO = 'F';
 	private static final double PRECIO_BASE_POR_DEFECTO = 100;
 	private static final double PESO_POR_DEFECTO = 5;
@@ -21,6 +21,7 @@ public class Electrodomestico {
 	// Constructores
 	public Electrodomestico() {
 		this(PRECIO_BASE_POR_DEFECTO, PESO_POR_DEFECTO, COLOR_POR_DEFECTO, CONSUMO_POR_DEFECTO);
+		//this.precioBase = 100;
 
 	}
 
@@ -51,6 +52,7 @@ public class Electrodomestico {
         }
         return CONSUMO_POR_DEFECTO;
     }
+	
     
         
 }
