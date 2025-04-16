@@ -30,7 +30,7 @@ public class Lavadora extends Electrodomestico {
     }
 
     // Método para calcular el precio final
-    @Override
+    
     public double precioFinal() {
         double precioFinal = super.precioFinal(); // Llama al método de la clase padre
         if (carga > 30) {
