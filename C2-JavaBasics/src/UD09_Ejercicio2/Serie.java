@@ -67,35 +67,35 @@ public class Serie implements Entregable {
         this.creador = creador;
     }
 
-    @Override
+   
     public void entregar() {
         this.entregado = true;
     }
 
-    @Override
+ 
     public void devolver() {
         this.entregado = false;
     }
 
-    @Override
+   
     public boolean isEntregado() {
         return entregado;
     }
 
-    @Override
+ 
     public int compareTo(Object a) {
         Serie otra = (Serie) a;
         return Integer.compare(this.numeroTemporadas, otra.getNumeroTemporadas());
     }
 
-    @Override
+ 
     public String toString() {
-        return "Serie { " +
-                "Título = " + titulo + '\'' +
-                ", numeroTemporadas = " + numeroTemporadas +
-                ", entregado = " + entregado +
-                ", genero = " + genero + '\'' +
-                ", creador = " + creador + '\'' +
+        return "Serie {" +
+                "Título = " + titulo +
+                ", Número de Temporadas = " + numeroTemporadas +
+                ", Entregado = " + entregado +
+                ", Género = " + genero +
+                ", Creador = " + creador +
                 '}';
     }
 }

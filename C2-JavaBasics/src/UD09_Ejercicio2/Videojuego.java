@@ -67,28 +67,28 @@ public class Videojuego implements Entregable {
         this.compania = compania;
     }
 
-    @Override
+
     public void entregar() {
         this.entregado = true;
     }
 
-    @Override
+   
     public void devolver() {
         this.entregado = false;
     }
 
-    @Override
+  
     public boolean isEntregado() {
         return entregado;
     }
 
-    @Override
+  
     public int compareTo(Object a) {
         Videojuego otro = (Videojuego) a;
         return Integer.compare(this.horasEstimadas, otro.getHorasEstimadas());
     }
 
-    @Override
+   
     public String toString() {
         return "Videojuego {" +
                 "Título = " + titulo +
