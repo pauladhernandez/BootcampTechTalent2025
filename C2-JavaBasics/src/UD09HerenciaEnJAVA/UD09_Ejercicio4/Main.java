@@ -1,4 +1,4 @@
-package UD09_Ejercicio4;
+package UD09HerenciaEnJAVA.UD09_Ejercicio4;
 
 public class Main {
     public static void main(String[] args) {

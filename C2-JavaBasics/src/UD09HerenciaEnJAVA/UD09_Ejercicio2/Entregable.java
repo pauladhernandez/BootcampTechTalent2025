@@ -1,4 +1,4 @@
-package UD09_Ejercicio2;
+package UD09HerenciaEnJAVA.UD09_Ejercicio2;
 
 public interface Entregable {
     void entregar();

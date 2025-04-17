@@ -1,4 +1,4 @@
-package UD09_Ejercicio1;
+package UD09HerenciaEnJAVA.UD09_Ejercicio1;
 
 public class Electrodomestico {
 

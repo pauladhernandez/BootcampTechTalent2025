@@ -1,4 +1,4 @@
-package UD09_Ejercicio3;
+package UD09HerenciaEnJAVA.UD09_Ejercicio3;
 
 public class Libro {
     private String ISBN;
