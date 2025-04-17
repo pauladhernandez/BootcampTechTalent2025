@@ -17,6 +17,6 @@ public class Estudiante extends Persona {
  }
 
  public char getSexo() {
-     return sexo;
+     return super.getSexo();
  }
 } 
