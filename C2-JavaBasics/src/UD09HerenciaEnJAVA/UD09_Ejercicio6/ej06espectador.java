@@ -1,4 +1,4 @@
-package UD09HerenciaEnJAVA._Tareas;
+package UD09HerenciaEnJAVA.UD09_Ejercicio6;
 
 import javax.swing.JOptionPane; // Importamos JOptionPane para mostrar ventanas emergentes con mensajes
 

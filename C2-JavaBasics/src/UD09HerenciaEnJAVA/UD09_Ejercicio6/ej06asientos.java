@@ -1,4 +1,4 @@
-package UD09HerenciaEnJAVA._Tareas;
+package UD09HerenciaEnJAVA.UD09_Ejercicio6;
  // Define el paquete en el que se encuentra la clase
 
 import javax.swing.JOptionPane; // Importa la librería para mostrar diálogos en ventanas emergentes
