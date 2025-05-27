@@ -1,0 +1,105 @@
+[
+  {
+    "Codigo": 101,
+    "Nombre": "Portátil Lenovo IdeaPad",
+    "Precio": 1800,
+    "Fabricante": 1
+  },
+  {
+    "Codigo": 102,
+    "Nombre": "Monitor HP 24\"",
+    "Precio": 750,
+    "Fabricante": 2
+  },
+  {
+    "Codigo": 103,
+    "Nombre": "Dell XPS 13",
+    "Precio": 2200,
+    "Fabricante": 3
+  },
+  {
+    "Codigo": 104,
+    "Nombre": "MacBook Air M1",
+    "Precio": 3000,
+    "Fabricante": 4
+  },
+  {
+    "Codigo": 105,
+    "Nombre": "Router Asus RT-AX88U",
+    "Precio": 1200,
+    "Fabricante": 5
+  },
+  {
+    "Codigo": 106,
+    "Nombre": "Monitor Acer Nitro",
+    "Precio": 850,
+    "Fabricante": 6
+  },
+  {
+    "Codigo": 107,
+    "Nombre": "Tablet Samsung Galaxy Tab S6",
+    "Precio": 1400,
+    "Fabricante": 7
+  },
+  {
+    "Codigo": 108,
+    "Nombre": "Surface Pro 7",
+    "Precio": 2700,
+    "Fabricante": 8
+  },
+  {
+    "Codigo": 109,
+    "Nombre": "MSI Gaming Laptop",
+    "Precio": 3100,
+    "Fabricante": 9
+  },
+  {
+    "Codigo": 110,
+    "Nombre": "Disco Duro Toshiba 1TB",
+    "Precio": 450,
+    "Fabricante": 10
+  }
+]
+
+[
+  {
+    "Codigo": 1,
+    "Nombre": "Lenovo"
+  },
+  {
+    "Codigo": 2,
+    "Nombre": "HP"
+  },
+  {
+    "Codigo": 3,
+    "Nombre": "Dell"
+  },
+  {
+    "Codigo": 4,
+    "Nombre": "Apple"
+  },
+  {
+    "Codigo": 5,
+    "Nombre": "Asus"
+  },
+  {
+    "Codigo": 6,
+    "Nombre": "Acer"
+  },
+  {
+    "Codigo": 7,
+    "Nombre": "Samsung"
+  },
+  {
+    "Codigo": 8,
+    "Nombre": "Microsoft"
+  },
+  {
+    "Codigo": 9,
+    "Nombre": "MSI"
+  },
+  {
+    "Codigo": 10,
+    "Nombre": "Toshiba"
+  }
+]

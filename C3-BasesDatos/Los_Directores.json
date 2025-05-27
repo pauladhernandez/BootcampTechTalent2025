@@ -1,0 +1,105 @@
+[
+  {
+    "DNI": "D001",
+    "NomApels": "Luis García",
+    "DNIJefe": null,
+    "Despacho": 101
+  },
+  {
+    "DNI": "D002",
+    "NomApels": "Ana Martínez",
+    "DNIJefe": "D001",
+    "Despacho": 102
+  },
+  {
+    "DNI": "D003",
+    "NomApels": "Carlos Pérez",
+    "DNIJefe": "D001",
+    "Despacho": 103
+  },
+  {
+    "DNI": "D004",
+    "NomApels": "Elena Gómez",
+    "DNIJefe": "D002",
+    "Despacho": 104
+  },
+  {
+    "DNI": "D005",
+    "NomApels": "Juan Torres",
+    "DNIJefe": "D002",
+    "Despacho": 105
+  },
+  {
+    "DNI": "D006",
+    "NomApels": "María Ruiz",
+    "DNIJefe": "D003",
+    "Despacho": 106
+  },
+  {
+    "DNI": "D007",
+    "NomApels": "David Herrera",
+    "DNIJefe": "D003",
+    "Despacho": 107
+  },
+  {
+    "DNI": "D008",
+    "NomApels": "Lucía Moreno",
+    "DNIJefe": "D004",
+    "Despacho": 108
+  },
+  {
+    "DNI": "D009",
+    "NomApels": "Pedro Ramírez",
+    "DNIJefe": "D004",
+    "Despacho": 109
+  },
+  {
+    "DNI": "D010",
+    "NomApels": "Sandra Díaz",
+    "DNIJefe": "D005",
+    "Despacho": 110
+  }
+]
+
+[
+  {
+    "Numero": 101,
+    "Capacidad": 2
+  },
+  {
+    "Numero": 102,
+    "Capacidad": 1
+  },
+  {
+    "Numero": 103,
+    "Capacidad": 2
+  },
+  {
+    "Numero": 104,
+    "Capacidad": 1
+  },
+  {
+    "Numero": 105,
+    "Capacidad": 2
+  },
+  {
+    "Numero": 106,
+    "Capacidad": 1
+  },
+  {
+    "Numero": 107,
+    "Capacidad": 2
+  },
+  {
+    "Numero": 108,
+    "Capacidad": 1
+  },
+  {
+    "Numero": 109,
+    "Capacidad": 2
+  },
+  {
+    "Numero": 110,
+    "Capacidad": 1
+  }
+]
