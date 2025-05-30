@@ -7,11 +7,6 @@ import java.awt.EventQueue;
 public class Ejercicio1 {
 	
 
-
-
-
-	
-
 	    public static void main(String[] args) {
 	        EventQueue.invokeLater(() -> {
 	            JFrame frame = new JFrame("Mi Ventana Gráfica");
