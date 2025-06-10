@@ -6,6 +6,7 @@ public class Barco {
     private boolean horizontal;
     private int fila;
     private int columna;
+    private boolean markedSunk = false;
 
     public Barco(int tamaño) {
         this.tamaño = tamaño;
@@ -21,13 +22,19 @@ public class Barco {
     }
 
     public void recibirImpacto() {
-        if (vidas > 0) {
-            vidas--;
-        }
+        if (vidas > 0) vidas--;
     }
 
     public boolean estaHundido() {
         return vidas == 0;
+    }
+
+    public boolean isMarkedSunk() {
+        return markedSunk;
+    }
+
+    public void setMarkedSunk(boolean marked) {
+        this.markedSunk = marked;
     }
 
     public boolean esHorizontal() {
