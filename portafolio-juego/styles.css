@@ -1,0 +1,33 @@
+/* styles.css */
+body {
+  padding-top: 70px;
+}
+
+/* GRID para el tablero de Hundir la Flota */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #add8e6; /* agua */
+  border: 1px solid #000;
+}
+
+/* Responsive: casillas más pequeñas en pantallas estrechas */
+@media (max-width: 768px) {
+  .board-grid {
+    grid-template-columns: repeat(10, 20px);
+    grid-template-rows: repeat(10, 20px);
+    gap: 1px;
+  }
+  .cell {
+    width: 20px;
+    height: 20px;
+  }
+}
