@@ -1,7 +1,8 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	]
+    "folders": [
+        {
+            "name": "BootcampTechTalent2025",
+            "path": "../BootcampTechTalent2025"
+        }
+    ]
 }
