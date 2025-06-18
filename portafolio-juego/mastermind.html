@@ -11,39 +11,65 @@
   />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Tablero de Mastermind: 4 columnas (pistas) + 4 columnas (resultado) */
-    .mastermind-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 40px) 1fr repeat(4, 12px);
-      grid-auto-rows: 40px;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-    .peg {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #ccc;
-      border: 1px solid #888;
-    }
-    .hint {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #eee;
-      border: 1px solid #888;
-    }
-    @media (max-width: 768px) {
-      .mastermind-grid {
-        grid-template-columns: repeat(4, 30px) 1fr repeat(4, 8px);
-        grid-auto-rows: 30px;
-        gap: 4px;
-      }
-      .peg { width: 30px; height: 30px; }
-      .hint { width: 8px; height: 8px; }
-    }
-  </style>
+.mastermind-board {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 24px 16px;
+}
+.mastermind-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.mastermind-color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 4px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.mastermind-color.selected {
+  border: 2px solid #222;
+}
+.mastermind-hints {
+  display: flex;
+  margin-left: 16px;
+}
+.mastermind-hint {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 2px;
+  border: 1px solid #bbb;
+}
+.palette {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0;
+}
+.palette-color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 6px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.palette-color.selected {
+  border: 2px solid #222;
+}
+button {
+  display: block;
+  margin: 18px auto 0 auto;
+}
+</style>
 </head>
 <body>
   <!-- NAV igual que en index.html -->
@@ -84,24 +110,111 @@
 
   <!-- TABLERO ESTÁTICO -->
   <main class="container my-5 text-center">
-    <div class="mastermind-grid">
-      <!-- 10 filas de 4 pegs + espacio + 4 hints -->
-      <!-- Aquí mostramos un tablero vacío de ejemplo -->
-      <!-- Repite esta línea 10 veces (40 .peg y 40 .hint) -->
-      <!-- Para abreviar, muestro 2 filas; duplica hasta 10 -->
-      <div class="peg"></div><div class="peg"></div><div class="peg"></div><div class="peg"></div>
-      <div></div> <!-- columna vacía de separación -->
-      <div class="hint"></div><div class="hint"></div><div class="hint"></div><div class="hint"></div>
-
-      <div class="peg"></div><div class="peg"></div><div class="peg"></div><div class="peg"></div>
-      <div></div>
-      <div class="hint"></div><div class="hint"></div><div class="hint"></div><div class="hint"></div>
-      <!-- … repetir 8 filas más … -->
-    </div>
-    <p class="mt-4">
+      
+      <style>
+      .mastermind-board {
+        max-width: 400px;
+        margin: 40px auto;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 24px 16px;
+      }
+      .mastermind-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+      .mastermind-colors {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+      }
+      .mastermind-color {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin: 0 4px;
+        border: 2px solid #ccc;
+      }
+      .mastermind-hints {
+        display: flex;
+        justify-content: center;
+      }
+      .mastermind-hint {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin: 0 2px;
+        border: 1px solid #bbb;
+      }
+      </style>
+<p class="mt-4">
       Cada fila tiene 4 pines de color para tu intento y 4 pines de pista.<br>
       El juego real permitiría seleccionar colores; aquí solo es una maqueta visual.
     </p>
+  </main>
+
+      <div class="mastermind-board">
+        <h3 style="text-align:center;">Ejemplo de juego</h3>
+        <!-- Intento 1 -->
+        <div class="mastermind-row">
+          <div class="mastermind-colors">
+            <div class="mastermind-color" style="background:red;"></div>
+            <div class="mastermind-color" style="background:blue;"></div>
+            <div class="mastermind-color" style="background:yellow;"></div>
+            <div class="mastermind-color" style="background:green;"></div>
+          </div>
+          <div class="mastermind-hints">
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:white;"></div>
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:white;"></div>
+          </div>
+        </div>
+        <!-- Intento 2 -->
+        <div class="mastermind-row">
+          <div class="mastermind-colors">
+            <div class="mastermind-color" style="background:green;"></div>
+            <div class="mastermind-color" style="background:yellow;"></div>
+            <div class="mastermind-color" style="background:red;"></div>
+            <div class="mastermind-color" style="background:blue;"></div>
+          </div>
+          <div class="mastermind-hints">
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:white;"></div>
+          </div>
+        </div>
+        <!-- Intento 3 (acierto) -->
+        <div class="mastermind-row">
+          <div class="mastermind-colors">
+            <div class="mastermind-color" style="background:blue;"></div>
+            <div class="mastermind-color" style="background:yellow;"></div>
+            <div class="mastermind-color" style="background:green;"></div>
+            <div class="mastermind-color" style="background:red;"></div>
+          </div>
+          <div class="mastermind-hints">
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:black;"></div>
+            <div class="mastermind-hint" style="background:black;"></div>
+          </div>
+        </div>
+        <div style="text-align:center; color:green; margin-top:18px;">
+          ¡Has acertado la combinación!
+        </div>
+      </div
+    <!-- ...código existente... -->
+    </style>
+    
+
+    </style>
+    
+    
+    
   </main>
 
   <!-- FOOTER -->
