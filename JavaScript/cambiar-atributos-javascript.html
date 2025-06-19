@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #e0f7fa, #fffde4);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #333;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px 5px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #01579b;
+    }
+    img {
+      margin: 30px 0;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      border: 4px solid #b2ebf2;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Qué puede hacer JavaScript?</h1>
+  <p>JavaScript puede cambiar atributos HTML como en este caso el src de una imagen</p>
+
+  <button onclick="document.getElementById('Día').src='Mañanamar.png'">Mañana en el mar</button>
+  <button onclick="document.getElementById('Día').src='Tardemar.png'">Tarde en el mar</button>
+  <button onclick="document.getElementById('Día').src='Nochemar.png'">Noche en el mar</button>
+  <br>
+  <img id="Día" src="Mañanamar.png" height="200px">
+</body>
+</html>

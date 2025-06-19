@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: linear-gradient(to right, #f8ffae, #43c6ac);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #43c6ac;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      margin: 10px 8px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(67,198,172,0.15);
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+    #estilo {
+      margin-top: 40px;
+      color: #333;
+      font-size: 16px;
+      background: #fffde4;
+      padding: 18px 30px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: font-size 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Qué puede hacer JavaScript?</h1>
+  <button type="button" onclick="document.getElementById('estilo').style.fontSize='35px'">AGRANDA 20px</button>
+  <button type="button" onclick="document.getElementById('estilo').style.fontSize='16px'">ORIGINAL 16px</button>
+
+  <p id="estilo">JavaScript puede cambiar el estilo de un elemento HTML</p>
+
+</body>
+</html>
