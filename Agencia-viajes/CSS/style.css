@@ -94,3 +94,87 @@ display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 }
+
+
+
+
+/* ESTA ES LA PARTE DEL BLOG */
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} */
+.headerblog {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li a.active {
+  text-decoration: underline;
+}
+main {
+  padding: 2rem;
+}
+.tabs button {
+  margin-right: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.continente {
+  margin-top: 1rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  margin-top: 2rem;
+}
+
+.lugares-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.lugar-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  overflow: hidden;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.lugar-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.lugar-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.lugar-info {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* AQUI TERMINA EL BLOG */
