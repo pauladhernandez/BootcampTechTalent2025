@@ -3,7 +3,6 @@
 html,
 body {
   overflow-x: hidden;
-  width: 100%;
   max-width: 100vw;
 }
 header {
@@ -15,6 +14,12 @@ header {
   margin: 0;
   left: 0;
   right: 0;
+}
+.subtitulo-inicio {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #333;
+  margin-top: 0.5rem;
 }
 footer {
   background-color: aquamarine;
